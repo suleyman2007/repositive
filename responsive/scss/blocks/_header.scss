@@ -1,0 +1,98 @@
+.header {
+    max-width: 100%;
+    padding-top: 72px;
+    background-color: $darkblue;
+
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .cite-logo {
+        display: block;
+        padding-right: 40px;
+    }
+}
+
+.nav {
+    display: flex;
+    flex-grow: 1;
+}
+
+.nav__list {
+    position: relative;
+    right: -40px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .nav__list-item {
+        a {
+            margin-left: 40px;
+            text-decoration: none;
+            color: white;
+
+        }
+    }
+
+    .nav__list-item:last-child {
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
+
+        button {
+            padding: 10px 32px;
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            border-radius: 24px;
+        }
+    }
+}
+
+.burger-btn {
+    margin-right: 60px;
+    background-color: transparent;
+    border: none;
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .nav {
+        justify-content: flex-end;
+    }
+
+    .burger-btn {
+        display: block;
+    }
+
+    .nav__list {
+        display: none;
+        flex-direction: column;
+
+        .nav__list-item:last-child {
+            margin-top: 15px;
+        }
+
+        .nav__list-item:last-child {
+            button {
+                border: none;
+                padding: 0 0;
+            }
+        }
+
+    }
+
+    .nav:hover .burger-btn {
+        display: none;
+
+    }
+
+    .nav:hover .nav__list {
+        display: flex;
+    }
+}
